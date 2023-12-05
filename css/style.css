@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Aretha Bridge', sans-serif;
+    background-color: #090909;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 500px;
+    background-size: contain;
+}
+
+
+.card-content {
+    position: relative;
+    padding: 15.3rem;
+    transform-style: preserve-3d;
+    transition: transform 4s;
+}
+
+.card:hover .card-content {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+    background-size: cover;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.card-front {
+    background-image: url(../img/Apodys.png);
+    align-items: center;
+}
+
+.card-front::before {
+    content: "";
+    position: absolute;
+    inset: -7rem;
+    border: 2.5px solid #4d0e13;
+    transform: translateZ(3rem);
+    -webkit-box-shadow: 0px 0px 35px 10px rgba(77, 14, 19, 0.8);
+    -moz-box-shadow: 0px 0px 35px 10px rgba(77, 14, 19, 0.8);
+    box-shadow: 0px 0px 35px 10px rgba(77, 14, 19, 0.8);
+}
+
+.title {
+    font-family: "Teko", sans-serif;
+    padding-bottom: 12.5em;
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    transform: translateZ(6rem);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    gap: 2.5rem;
+}
+
+.back-title {
+    font-family: 'Aretha Bridge', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #eee;
+    text-transform: uppercase;
+    align-self: center;
+    transform: translateZ(4rem);
+}
+
+.card-back span {
+    font-weight: 900;
+    font-size: 2rem;
+    color: #830812;
+}
+
+.btn {
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 2.2rem;
+    color: #830812;
+    border: 2px solid white;
+    border-radius: 100px;
+    text-align: center;
+    align-self: center;
+    margin-top: 1rem;
+    transform: translateZ(2rem);
+    transition: 0.3s ease;
+    backface-visibility: hidden;
+}
+
+.btn:hover {
+    background-color: #830812;
+    color: white;
+    border: 2px solid #090909;
+}
